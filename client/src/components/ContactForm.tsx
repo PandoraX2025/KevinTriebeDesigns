@@ -36,19 +36,24 @@ export default function ContactForm() {
     setIsSubmitting(true);
     
     try {
-      await apiRequest("POST", "/api/contact", values);
+      // Direkt zum E-Mail-Client weiterleiten
+      const subject = encodeURIComponent(values.subject);
+      const body = encodeURIComponent(`Name: ${values.name}\nE-Mail: ${values.email}\n\nNachricht:\n${values.message}`);
+      const mailtoLink = `mailto:kevintriebe2025@gmail.com?subject=${subject}&body=${body}`;
+      
+      window.open(mailtoLink, '_blank');
       
       toast({
-        title: "Nachricht gesendet!",
-        description: "Wir werden uns so schnell wie möglich bei Ihnen melden.",
+        title: "Fertig!",
+        description: "Das E-Mail-Programm sollte sich öffnen. Bitte senden Sie Ihre Nachricht von dort aus.",
         variant: "default",
       });
       
       form.reset();
     } catch (error) {
       toast({
-        title: "Fehler beim Senden",
-        description: "Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.",
+        title: "Fehler",
+        description: "Es gab ein Problem. Bitte senden Sie eine E-Mail an kevintriebe2025@gmail.com.",
         variant: "destructive",
       });
       console.error("Contact form error:", error);
@@ -138,7 +143,7 @@ export default function ContactForm() {
           disabled={isSubmitting}
           className="w-full bg-primary hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition"
         >
-          {isSubmitting ? "Nachricht wird gesendet..." : "Nachricht senden"}
+          {isSubmitting ? "E-Mail wird vorbereitet..." : "E-Mail öffnen"}
         </Button>
       </form>
     </Form>
