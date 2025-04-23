@@ -19,10 +19,11 @@ const DiscordWidget: React.FC<DiscordWidgetProps> = ({
         src={`https://discord.com/widget?id=${serverId}&theme=${theme}`}
         width="100%"
         height="100%"
-        allowtransparency="true" 
+        allow="autoplay; encrypted-media" 
         frameBorder="0" 
         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
         title="Discord Server Widget"
+        style={{ border: 'none' }}
       ></iframe>
     </div>
   );

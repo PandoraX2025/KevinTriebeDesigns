@@ -27,22 +27,22 @@ export default function Navbar() {
                 {/* Top Row - Main Navigation */}
                 <div className="flex space-x-1 justify-end mb-1">
                   <Link href="/" className="px-3 py-1 font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition text-sm">Startseite</Link>
-                  <a href="#services" className="px-3 py-1 font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition text-sm">Leistungen</a>
-                  <a href="#ai" className="px-3 py-1 font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition text-sm">KI-Entwicklung</a>
-                  <a href="#portfolio" className="px-3 py-1 font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition text-sm">Portfolio</a>
-                  <a href="#about" className="px-3 py-1 font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition text-sm">Über uns</a>
+                  <Link href="/services" className="px-3 py-1 font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition text-sm">Leistungen</Link>
+                  <Link href="/ai" className="px-3 py-1 font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition text-sm">KI-Entwicklung</Link>
+                  <Link href="/portfolio" className="px-3 py-1 font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition text-sm">Portfolio</Link>
+                  <Link href="/about" className="px-3 py-1 font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition text-sm">Über uns</Link>
                 </div>
                 
                 {/* Bottom Row - Special Links */}
                 <div className="flex space-x-1 justify-end">
-                  <a href="#contact" className="px-3 py-1 font-medium text-blue-600 dark:text-blue-400 hover:text-primary dark:hover:text-primary transition text-sm">Kontakt</a>
-                  <a href="#teamspeak" className="px-3 py-1 font-medium text-blue-600 dark:text-blue-400 hover:text-primary dark:hover:text-primary transition text-sm flex items-center">
+                  <Link href="/contact" className="px-3 py-1 font-medium text-blue-600 dark:text-blue-400 hover:text-primary dark:hover:text-primary transition text-sm">Kontakt</Link>
+                  <Link href="/teamspeak" className="px-3 py-1 font-medium text-blue-600 dark:text-blue-400 hover:text-primary dark:hover:text-primary transition text-sm flex items-center">
                     <i className="fas fa-headset mr-1 text-xs"></i>
                     TeamSpeak
-                  </a>
-                  <a href="#discord" className="px-3 py-1 font-medium text-[#5865F2] hover:text-primary transition text-sm flex items-center">
+                  </Link>
+                  <Link href="/discord" className="px-3 py-1 font-medium text-[#5865F2] hover:text-primary transition text-sm flex items-center">
                     <i className="fab fa-discord mr-1 text-xs"></i> Discord
-                  </a>
+                  </Link>
                 </div>
               </div>
             </nav>
@@ -78,55 +78,55 @@ export default function Navbar() {
           >
             <i className="fas fa-home mr-2 text-primary"></i> Startseite
           </Link>
-          <a 
-            href="#services" 
+          <Link 
+            href="/services" 
             className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
             onClick={() => setMobileMenuOpen(false)}
           >
             <i className="fas fa-cogs mr-2 text-primary"></i> Leistungen
-          </a>
-          <a 
-            href="#ai" 
+          </Link>
+          <Link 
+            href="/ai" 
             className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
             onClick={() => setMobileMenuOpen(false)}
           >
             <i className="fas fa-robot mr-2 text-primary"></i> KI-Entwicklung
-          </a>
-          <a 
-            href="#portfolio" 
+          </Link>
+          <Link 
+            href="/portfolio" 
             className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
             onClick={() => setMobileMenuOpen(false)}
           >
             <i className="fas fa-briefcase mr-2 text-primary"></i> Portfolio
-          </a>
-          <a 
-            href="#about" 
+          </Link>
+          <Link 
+            href="/about" 
             className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
             onClick={() => setMobileMenuOpen(false)}
           >
             <i className="fas fa-users mr-2 text-primary"></i> Über uns
-          </a>
-          <a 
-            href="#contact" 
+          </Link>
+          <Link 
+            href="/contact" 
             className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
             onClick={() => setMobileMenuOpen(false)}
           >
             <i className="fas fa-envelope mr-2 text-primary"></i> Kontakt
-          </a>
-          <a 
-            href="#teamspeak" 
+          </Link>
+          <Link 
+            href="/teamspeak" 
             className="px-3 py-2 rounded-md font-medium text-blue-600 dark:text-blue-400 hover:bg-gray-200 dark:hover:bg-gray-800 transition"
             onClick={() => setMobileMenuOpen(false)}
           >
             <i className="fas fa-headset mr-2"></i> TeamSpeak
-          </a>
-          <a 
-            href="#discord" 
+          </Link>
+          <Link 
+            href="/discord" 
             className="px-3 py-2 rounded-md font-medium text-[#5865F2] hover:bg-gray-200 dark:hover:bg-gray-800 transition"
             onClick={() => setMobileMenuOpen(false)}
           >
             <i className="fab fa-discord mr-2"></i> Discord
-          </a>
+          </Link>
         </div>
       </div>
     </header>
