@@ -5,11 +5,10 @@ import { eq } from 'drizzle-orm';
 
 const router = Router();
 
-// Hole genehmigte Testimonials
+// Hole alle Testimonials (ohne approved Filter)
 router.get('/', async (_req: Request, res: Response) => {
   try {
     const results = await db.select().from(testimonials)
-      .where(eq(testimonials.approved, true))
       .orderBy(testimonials.createdAt);
     
     res.json(results);
