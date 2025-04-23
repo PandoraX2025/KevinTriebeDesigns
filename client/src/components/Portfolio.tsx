@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Dialog } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 
 // Importieren der Projektbilder
@@ -120,48 +119,46 @@ export default function Portfolio() {
       )}
 
       {/* Project Detail Modal */}
-      <Dialog open={open} onOpenChange={setOpen}>
-        {selectedItem && (
+      {selectedItem && open && (
+        <div 
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50 p-4"
+          onClick={() => setOpen(false)}
+        >
           <div 
-            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4"
-            onClick={() => setOpen(false)}
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
           >
-            <div 
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg max-w-3xl w-full max-h-90vh overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="relative">
-                <img 
-                  src={selectedItem.image} 
-                  alt={selectedItem.title} 
-                  className="w-full aspect-video object-contain"
-                />
-                <button 
-                  className="absolute top-2 right-2 bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center z-10"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setOpen(false);
-                  }}
-                >
-                  <i className="fas fa-times"></i>
-                </button>
-              </div>
-              <div className="p-6">
-                <h2 className="text-2xl font-bold dark:text-white mb-2">{selectedItem.title}</h2>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">{selectedItem.description}</p>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                    {selectedItem.category === 'web' && 'Webentwicklung'}
-                    {selectedItem.category === 'script' && 'Scripting'}
-                    {selectedItem.category === '3d' && '3D Design'}
-                    {selectedItem.category === 'design' && 'Grafikdesign'}
-                  </span>
-                </div>
+            <div className="relative">
+              <img 
+                src={selectedItem.image} 
+                alt={selectedItem.title} 
+                className="w-full aspect-video object-contain"
+              />
+              <button 
+                className="absolute top-3 right-3 bg-black bg-opacity-75 text-white rounded-full w-10 h-10 flex items-center justify-center z-10 hover:bg-opacity-100"
+                onClick={() => setOpen(false)}
+                aria-label="Schließen"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="p-6">
+              <h2 className="text-2xl font-bold dark:text-white mb-2">{selectedItem.title}</h2>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">{selectedItem.description}</p>
+              <div className="flex gap-2">
+                <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                  {selectedItem.category === 'web' && 'Webentwicklung'}
+                  {selectedItem.category === 'script' && 'Scripting'}
+                  {selectedItem.category === '3d' && '3D Design'}
+                  {selectedItem.category === 'design' && 'Grafikdesign'}
+                </span>
               </div>
             </div>
           </div>
-        )}
-      </Dialog>
+        </div>
+      )}
     </div>
   );
 }
