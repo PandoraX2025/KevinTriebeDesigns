@@ -87,6 +87,72 @@ export default function DiscordPage() {
               </div>
             </div>
             
+            {/* FiveM Zombie Survival Server Discord */}
+            <div className="max-w-5xl mx-auto bg-gray-50 dark:bg-gray-700 rounded-xl shadow-lg p-6 mt-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-5">
+                  <div className="text-center md:text-left">
+                    <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300 mb-3">
+                      <i className="fas fa-calendar-alt mr-1"></i> Eröffnung: 01.05.2025, 18:00 Uhr
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 dark:text-white">FiveM Zombie Survival Server</h3>
+                    <p className="dark:text-gray-300 text-gray-600 text-sm md:text-base mb-4">
+                      Unser neues FiveM-Projekt: Ein packender Zombie Survival Server mit intensivem Gameplay und einer wachsenden Community. Erlebe das Zombie-Apokalypse Abenteuer!
+                    </p>
+                  </div>
+                  
+                  <div className="flex flex-col space-y-3">
+                    <a 
+                      href="https://discord.com/invite/1309173213959290930" 
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-medium py-4 px-6 rounded-lg transition text-lg"
+                    >
+                      <i className="fas fa-biohazard mr-2 text-xl"></i>
+                      Zombie Server beitreten
+                    </a>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-left">
+                      Sei von Anfang an dabei und hilf mit, unsere Zombie-Community aufzubauen!
+                    </p>
+                  </div>
+                  
+                  <div className="border-t border-gray-200 dark:border-gray-600 pt-4 mt-4">
+                    <h4 className="font-semibold mb-2 dark:text-white">Features des Zombie Survival Servers:</h4>
+                    <ul className="space-y-1 text-sm dark:text-gray-300 text-gray-600">
+                      <li className="flex items-start">
+                        <i className="fas fa-skull text-red-500 mt-0.5 mr-2"></i>
+                        Packende Zombie-Überlebenssimulation
+                      </li>
+                      <li className="flex items-start">
+                        <i className="fas fa-users text-red-500 mt-0.5 mr-2"></i>
+                        Gruppenbildung und Überlebensstrategien
+                      </li>
+                      <li className="flex items-start">
+                        <i className="fas fa-home text-red-500 mt-0.5 mr-2"></i>
+                        Bases aufbauen und verteidigen
+                      </li>
+                      <li className="flex items-start">
+                        <i className="fas fa-syringe text-red-500 mt-0.5 mr-2"></i>
+                        Einzigartiges Infektionssystem
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="h-[500px] flex justify-center">
+                  <iframe 
+                    src="https://discord.com/widget?id=1309173213959290930&theme=dark" 
+                    width="100%" 
+                    height="100%" 
+                    frameBorder="0" 
+                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+                    className="rounded-md"
+                    title="FiveM Zombie Survival Discord"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            
             {/* Discord Vorteile */}
             <div className="max-w-4xl mx-auto mt-12">
               <h3 className="text-2xl font-bold mb-6 text-center dark:text-white">Warum Discord?</h3>
