@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 
 // Bilder
-const discordBotImage = "/src/assets/discord-bots.png";
-const luaScriptingImage = "/src/assets/lua-scripting.png";
-const codewalkerImage = "/src/assets/codewalker-beispiel.jpg";
-const blenderCarImage = "/src/assets/blender-car-beispiel.jpeg";
-const webdesignImage = "/src/assets/webdesign-beispiel.png";
-const gtaHudImage = "/src/assets/grafik-design-hut-gtafiveM.png";
-const gtaHudCodeImage = "/src/assets/fdd-lifehudclient-code.PNG";
+const discordBotImage = 'https://i.imgur.com/6JVHiO1.png';
+const luaScriptingImage = 'https://i.imgur.com/pHFtZu9.png';
+const codewalkerImage = 'https://i.imgur.com/ZJvNtjQ.jpg';
+const blenderCarImage = 'https://i.imgur.com/TwZdh5v.jpeg';
+const webdesignImage = 'https://i.imgur.com/YxKwEpf.png';
+const gtaHudImage = 'https://i.imgur.com/e5V1qJJ.png';
+const gtaHudCodeImage = 'https://i.imgur.com/QP3LEg5.png';
 
 // Typen für Portfolio-Projekte
 interface PortfolioItem {
