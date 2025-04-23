@@ -5,8 +5,12 @@ import nodemailer from "nodemailer";
 import { contactSchema } from "@shared/schema";
 import { z } from "zod";
 import { fromZodError } from "zod-validation-error";
+import testimonialsRouter from "./routes/testimonials";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Testimonials API-Routen
+  app.use('/api/testimonials', testimonialsRouter);
+  
   // Contact form endpoint
   app.post("/api/contact", async (req, res) => {
     try {
