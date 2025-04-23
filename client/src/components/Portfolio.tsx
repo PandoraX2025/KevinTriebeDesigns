@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 
-// Importieren der Projektbilder
-import discordBotImage from '@assets/discord-bot.png';
-import luaScriptingImage from '@assets/lua-scripting.png';
-import codewalkerImage from '@assets/codealker.png';
+// Bilder
+const discordBotImage = "/src/assets/discord-bots.png";
+const luaScriptingImage = "/src/assets/lua-scripting.png";
+const codewalkerImage = "/src/assets/codewalker-beispiel.jpg";
 
 // Typen für Portfolio-Projekte
 interface PortfolioItem {
