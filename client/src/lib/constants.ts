@@ -3,6 +3,8 @@ import blenderLogo from '../assets/blender-logo.png';
 import codewalkerLogo from '../assets/codewalker-logo.png'; 
 import luaLogo from '../assets/lua-logo.png';
 import pythonLogo from '../assets/python-logo.png';
+import scriptingCodeImage from '../assets/scripting-code.jpg';
+import webDevLogo from '../assets/web-dev-logo.jpg';
 
 // Hintergrundbilder für Services
 const webDevBg = "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80";
@@ -22,19 +24,19 @@ export const services = [
     image: webDevBg,
     gradientFrom: "blue-400",
     gradientTo: "indigo-500",
-    programLogos: []
+    programLogos: [webDevLogo]
   },
   {
-    title: "Scripting & Bots",
+    title: "Scripting & Logik",
     icon: "fas fa-terminal",
     iconColor: "text-purple-500",
-    description: "Maßgeschneiderte Skripte und Bots für verschiedene Plattformen.",
+    description: "Maßgeschneiderte Skripte und Programmlogik für verschiedene Plattformen.",
     features: [
       { text: "Lua Scripts für FiveM/GTA" },
       { text: "Discord Bots mit Python" },
       { text: "Automatisierungs-Skripte" }
     ],
-    image: luaLogo,
+    image: scriptingCodeImage,
     secondaryImage: pythonLogo,
     gradientFrom: "purple-400",
     gradientTo: "pink-500",

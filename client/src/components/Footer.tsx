@@ -29,7 +29,7 @@ export default function Footer({ year }: FooterProps) {
             <h3 className="text-xl font-bold mb-4 text-white">Leistungen</h3>
             <ul className="space-y-2 text-gray-300">
               <li><a href="#services" className="hover:text-white transition">Web-Entwicklung</a></li>
-              <li><a href="#services" className="hover:text-white transition">Lua Scripting</a></li>
+              <li><a href="#services" className="hover:text-white transition">Scripting & Logik</a></li>
               <li><a href="#services" className="hover:text-white transition">Discord Bots</a></li>
               <li><a href="#services" className="hover:text-white transition">3D Design (Blender)</a></li>
               <li><a href="#services" className="hover:text-white transition">Grafikdesign</a></li>
