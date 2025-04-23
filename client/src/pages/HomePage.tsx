@@ -43,7 +43,6 @@ export default function HomePage() {
 
   return (
     <div className="font-sans antialiased transition-colors duration-300">
-      <ThemeToggle />
       <Navbar />
 
       <main>
