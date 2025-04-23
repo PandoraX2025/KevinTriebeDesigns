@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 // Importieren der Projektbilder
 import discordBotImage from '@assets/discord-bot.png';
 import luaScriptingImage from '@assets/lua-scripting.png';
+import codewalkerImage from '@assets/codealker.png';
 
 // Typen für Portfolio-Projekte
 interface PortfolioItem {
@@ -29,6 +30,13 @@ const portfolioItems: PortfolioItem[] = [
     description: "Ein fortschrittliches Loot-System für FiveM (GTA V Rollenspiel-Plattform), programmiert in Lua. Das System ermöglicht das dynamische Platzieren von Loot-Objekten in der Spielwelt, die Interaktion mit diesen Objekten und ein zufallsbasiertes Belohnungssystem. Die Skripte integrieren sich nahtlos in die ESX-Framework-Umgebung.",
     image: luaScriptingImage,
     category: 'script'
+  },
+  {
+    id: 3,
+    title: "GTA Farmhaus 3D-Mapping",
+    description: "3D-Mapping eines Farmhauses mit Umgebung für einen GTA V Rollenspiel-Server mit Codewalker. Detaillierte Umgebungsgestaltung mit natürlicher Vegetation, Zäunen und realistischer Terrainmodellierung. Das Projekt umfasst Objekt-Platzierung, Lichteffekte und nahtlose Integration in die bestehende Spielwelt.",
+    image: codewalkerImage,
+    category: '3d'
   }
 ];
 
