@@ -170,10 +170,10 @@ export default function HomePage() {
                 <div>
                   <h3 className="text-2xl font-bold mb-4">FD Developments and Design</h3>
                   <p className="mb-4 dark:text-gray-300 text-gray-600">
-                    Wir sind ein junges, dynamisches Team von zwei Entwicklern mit Sitz in Deutschland, die sich auf die Erstellung moderner Webanwendungen, Skripte und Designs spezialisiert haben.
+                    Wir sind ein junges, dynamisches Team bestehend aus einem Entwickler und einem Designer mit Sitz in Deutschland, die sich auf die Erstellung moderner Webanwendungen, Skripte und Designs spezialisiert haben.
                   </p>
                   <p className="mb-4 dark:text-gray-300 text-gray-600">
-                    Unter der Leitung von Kevin Triebe bieten wir maßgeschneiderte Lösungen für verschiedene digitale Bedürfnisse, von einfachen Websites bis hin zu komplexen Web-Anwendungen, Lua-Scripting für FiveM/GTA, Python-Discord-Bots und 3D-Design mit Blender.
+                    Unter der Leitung von Kevin Triebe (Entwickler) und mit Winter Scripts (Designer & Grafiker) an unserer Seite bieten wir maßgeschneiderte Lösungen für verschiedene digitale Bedürfnisse, von einfachen Websites bis hin zu komplexen Web-Anwendungen, Lua-Scripting für FiveM/GTA, Grafikdesign und 3D-Design mit Blender.
                   </p>
                   <p className="mb-6 dark:text-gray-300 text-gray-600">
                     Unser Ziel ist es, qualitativ hochwertige und kreative Lösungen zu liefern, die die Erwartungen unserer Kunden übertreffen und ihre digitale Präsenz auf die nächste Ebene bringen.
@@ -192,7 +192,7 @@ export default function HomePage() {
                         <div className="w-8 h-8 bg-secondary rounded-full text-white flex items-center justify-center mr-3">
                           <span className="font-bold">WS</span>
                         </div>
-                        Winter Scripts - Partner Developer
+                        Winter Scripts - Designer & Grafiker
                       </li>
                     </ul>
                   </div>
