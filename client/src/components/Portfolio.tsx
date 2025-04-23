@@ -6,6 +6,7 @@ const discordBotImage = "/src/assets/discord-bots.png";
 const luaScriptingImage = "/src/assets/lua-scripting.png";
 const codewalkerImage = "/src/assets/codewalker-beispiel.jpg";
 const blenderCarImage = "/src/assets/blender-car-beispiel.jpeg";
+const webdesignImage = "/src/assets/webdesign-beispiel.png";
 
 // Typen für Portfolio-Projekte
 interface PortfolioItem {
@@ -45,6 +46,13 @@ const portfolioItems: PortfolioItem[] = [
     description: "Ein mit Blender modelliertes und bearbeitetes Auto-Modell für einen GTA V Rollenspiel-Server. Das Modell wurde so angepasst, dass es ohne rechtliche Probleme verwendet werden kann. Die 3D-Modellierung umfasst detaillierte Geometrie, Texturen und Physik-Eigenschaften für eine realistische Integration in die Spielwelt.",
     image: blenderCarImage,
     category: '3d'
+  },
+  {
+    id: 5,
+    title: "Portfolio-Webseite CSS Styling",
+    description: "Eine der ersten Webdesign-Arbeiten - ein CSS-Stylesheet für eine Portfolio-Webseite. Das Design umfasst moderne Gestaltungselemente wie abgerundete Ecken, Schatten-Effekte und ein sorgfältig abgestimmtes Farbschema. Der Code zeigt die strukturierte Herangehensweise an CSS-Styling mit verschiedenen Selektoren und Klassen.",
+    image: webdesignImage,
+    category: 'web'
   }
 ];
 
