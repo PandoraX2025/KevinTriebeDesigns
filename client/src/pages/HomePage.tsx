@@ -3,7 +3,6 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
-import ContactForm from "@/components/ContactForm";
 import { services } from "@/lib/constants";
 import kiLogo from '../assets/ki-logo.png';
 
@@ -214,8 +213,24 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
               {/* Contact Form */}
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 md:p-6">
-                <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 dark:text-white">Nachricht senden</h3>
-                <ContactForm />
+                <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 dark:text-white">Angebot einholen</h3>
+                <div className="space-y-6">
+                  <div className="text-gray-600 dark:text-gray-300 text-sm md:text-base">
+                    Sind Sie an einer Zusammenarbeit interessiert? Klicken Sie unten, um direkt ein Angebot anzufordern:
+                  </div>
+                  <a 
+                    href="mailto:kevintriebe2025@gmail.com?subject=Anfrage%20für%20ein%20Angebot&body=Sehr%20geehrtes%20FD%20Developments%20and%20Design%20Team,%0A%0AIch%20interessiere%20mich%20für%20folgende%20Dienstleistung(en):%0A%0A-%20%0A%0AMeine%20Projektdetails:%0A%0A-%20%0A%0AVielen%20Dank%20für%20Ihre%20Zeit.%0A%0AMit%20freundlichen%20Grüßen,%0A%0AIhr%20Name:%0AKontakt:%0A" 
+                    className="w-full bg-primary hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition flex items-center justify-center"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="fas fa-envelope mr-2"></i>
+                    Angebot einholen
+                  </a>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                    Durch Klicken öffnet sich Ihr E-Mail-Programm mit einer vorbereiteten Anfrage.
+                  </p>
+                </div>
               </div>
 
               {/* Contact Info & Social Links */}
