@@ -168,6 +168,9 @@ export default function Footer({ year }: FooterProps) {
                   <li><a href="/about" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>Über uns
                   </a></li>
+                  <li><a href="/testimonials" className="hover:text-white transition flex items-center">
+                    <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>Bewertungen
+                  </a></li>
                   <li><a href="/teamspeak" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>TeamSpeak
                   </a></li>

@@ -13,6 +13,7 @@ import AboutPage from "@/pages/AboutPage";
 import ContactPage from "@/pages/ContactPage";
 import TeamspeakPage from "@/pages/TeamspeakPage";
 import DiscordPage from "@/pages/DiscordPage";
+import TestimonialsPage from "@/pages/TestimonialsPage";
 import AdminPage from "@/pages/AdminPage";
 
 function Router() {
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/contact" component={ContactPage} />
       <Route path="/teamspeak" component={TeamspeakPage} />
       <Route path="/discord" component={DiscordPage} />
+      <Route path="/testimonials" component={TestimonialsPage} />
       <Route path="/admin" component={AdminPage} />
       <Route component={NotFound} />
     </Switch>

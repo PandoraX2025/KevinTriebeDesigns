@@ -31,6 +31,7 @@ export default function Navbar() {
                   <Link href="/ai" className="px-3 py-1 font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition text-sm">KI-Entwicklung</Link>
                   <Link href="/portfolio" className="px-3 py-1 font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition text-sm">Portfolio</Link>
                   <Link href="/about" className="px-3 py-1 font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition text-sm">Über uns</Link>
+                  <Link href="/testimonials" className="px-3 py-1 font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition text-sm">Bewertungen</Link>
                 </div>
                 
                 {/* Bottom Row - Special Links */}
@@ -105,6 +106,13 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
           >
             <i className="fas fa-users mr-2 text-primary"></i> Über uns
+          </Link>
+          <Link 
+            href="/testimonials" 
+            className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <i className="fas fa-star mr-2 text-primary"></i> Bewertungen
           </Link>
           <Link 
             href="/contact" 
