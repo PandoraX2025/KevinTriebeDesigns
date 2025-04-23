@@ -4,6 +4,10 @@ import codewalkerLogo from '../assets/codewalker-logo.png';
 import luaLogo from '../assets/lua-logo.png';
 import pythonLogo from '../assets/python-logo.png';
 
+// Hintergrundbilder für Services
+const webDevBg = "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80";
+const graphicDesignBg = "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80";
+
 export const services = [
   {
     title: "Web-Entwicklung",
@@ -15,9 +19,10 @@ export const services = [
       { text: "Progressive Web Apps (PWA)" },
       { text: "Moderne Frameworks" }
     ],
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80",
+    image: webDevBg,
     gradientFrom: "blue-400",
-    gradientTo: "indigo-500"
+    gradientTo: "indigo-500",
+    programLogos: []
   },
   {
     title: "Scripting & Bots",
@@ -29,9 +34,11 @@ export const services = [
       { text: "Discord Bots mit Python" },
       { text: "Automatisierungs-Skripte" }
     ],
-    image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80",
+    image: luaLogo,
+    secondaryImage: pythonLogo,
     gradientFrom: "purple-400",
-    gradientTo: "pink-500"
+    gradientTo: "pink-500",
+    programLogos: [luaLogo, pythonLogo]
   },
   {
     title: "3D Design",
@@ -44,8 +51,10 @@ export const services = [
       { text: "Game Asset Creation" }
     ],
     image: blender3dImage,
+    secondaryImage: blenderLogo,
     gradientFrom: "teal-400",
-    gradientTo: "cyan-500"
+    gradientTo: "cyan-500",
+    programLogos: [blenderLogo, codewalkerLogo]
   },
   {
     title: "Grafikdesign",
@@ -57,8 +66,9 @@ export const services = [
       { text: "GIMP für offene Projekte" },
       { text: "UI/UX Design-Elemente" }
     ],
-    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80",
+    image: graphicDesignBg,
     gradientFrom: "amber-400",
-    gradientTo: "orange-500"
+    gradientTo: "orange-500",
+    programLogos: []
   }
 ];

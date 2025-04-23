@@ -88,11 +88,11 @@ export default function HomePage() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-16 bg-white dark:bg-dark-bg">
+        <section id="about" className="py-16 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Über uns</h2>
+                <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 dark:text-white">Über uns</h2>
                 <p className="text-lg max-w-2xl mx-auto dark:text-gray-300 text-gray-600">
                   Ein kleines Team mit großen Ideen und der Leidenschaft, digitale Projekte zum Leben zu erwecken
                 </p>
@@ -209,8 +209,8 @@ export default function HomePage() {
                 </div>
 
                 {/* Social Links */}
-                <div className="bg-white dark:bg-dark-card rounded-xl shadow-md p-6">
-                  <h3 className="text-xl font-bold mb-6">Folgen Sie uns</h3>
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+                  <h3 className="text-xl font-bold mb-6 dark:text-white">Folgen Sie uns</h3>
                   <div className="grid grid-cols-2 gap-4">
                     <a href="https://discord.gg/qEy8xf6CyV" target="_blank" rel="noreferrer" className="flex items-center p-4 bg-[#5865F2]/10 hover:bg-[#5865F2]/20 rounded-lg transition group">
                       <i className="fab fa-discord text-[#5865F2] text-2xl mr-4 group-hover:scale-110 transition"></i>
