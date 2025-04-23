@@ -9,7 +9,7 @@ interface ServiceCardProps {
     iconColor: string;
     description: string;
     features: Feature[];
-    image: string;
+    image: string | any; // Akzeptiert auch importierte Bilder
     gradientFrom: string;
     gradientTo: string;
   };

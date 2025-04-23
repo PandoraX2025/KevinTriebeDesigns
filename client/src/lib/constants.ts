@@ -39,7 +39,7 @@ export const services = [
       { text: "Codewalker für GTA-Ressourcen" },
       { text: "Game Asset Creation" }
     ],
-    image: "/src/assets/blender3d.jpg",
+    image: blender3dImage,
     gradientFrom: "teal-400",
     gradientTo: "cyan-500"
   },
