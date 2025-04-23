@@ -2,6 +2,10 @@ import { useState } from 'react';
 import { Dialog } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 
+// Importieren der Projektbilder
+import discordBotImage from '@assets/discord-bot.png';
+import luaScriptingImage from '@assets/lua-scripting.png';
+
 // Typen für Portfolio-Projekte
 interface PortfolioItem {
   id: number;
@@ -11,9 +15,22 @@ interface PortfolioItem {
   category: 'web' | 'script' | '3d' | 'design';
 }
 
-// Später werden wir diese mit echten Projekten füllen
+// Portfolio-Projekte
 const portfolioItems: PortfolioItem[] = [
-  // Hier werden die Beispielprojekte später eingefügt
+  {
+    id: 1,
+    title: "Discord Music Bot",
+    description: "Ein komplexer Discord Bot in Python, der Musik-Streaming-Funktionen bietet. Der Bot kann YouTube-Links abspielen, Wiedergabelisten verwalten und verwendet FFmpeg für die Audiokonvertierung. Er interagiert mit Benutzern in Sprachkanälen und reagiert auf Befehle, die in Textkanälen eingegeben werden.",
+    image: discordBotImage,
+    category: 'script'
+  },
+  {
+    id: 2,
+    title: "FiveM Lua Loot-System",
+    description: "Ein fortschrittliches Loot-System für FiveM (GTA V Rollenspiel-Plattform), programmiert in Lua. Das System ermöglicht das dynamische Platzieren von Loot-Objekten in der Spielwelt, die Interaktion mit diesen Objekten und ein zufallsbasiertes Belohnungssystem. Die Skripte integrieren sich nahtlos in die ESX-Framework-Umgebung.",
+    image: luaScriptingImage,
+    category: 'script'
+  }
 ];
 
 export default function Portfolio() {
@@ -90,7 +107,7 @@ export default function Portfolio() {
                 <img 
                   src={item.image} 
                   alt={item.title} 
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="p-4">
