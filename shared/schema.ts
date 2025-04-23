@@ -1,4 +1,4 @@
-import { pgTable, text, serial, integer, boolean } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, integer, boolean, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -25,3 +25,24 @@ export const contactSchema = z.object({
 });
 
 export type ContactForm = z.infer<typeof contactSchema>;
+
+// Testimonial (Kundenbewertung) Schema
+export const testimonials = pgTable('testimonials', {
+  id: serial('id').primaryKey(),
+  name: text('name').notNull(),
+  email: text('email').notNull(),
+  serviceType: text('service_type').notNull(),
+  content: text('content').notNull(),
+  approved: boolean('approved').default(false).notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+});
+
+export const insertTestimonialSchema = createInsertSchema(testimonials).pick({
+  name: true,
+  email: true,
+  serviceType: true,
+  content: true,
+});
+
+export type InsertTestimonial = z.infer<typeof insertTestimonialSchema>;
+export type Testimonial = typeof testimonials.$inferSelect;
