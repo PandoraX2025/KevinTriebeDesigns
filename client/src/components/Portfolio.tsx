@@ -122,17 +122,26 @@ export default function Portfolio() {
       {/* Project Detail Modal */}
       <Dialog open={open} onOpenChange={setOpen}>
         {selectedItem && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4">
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg max-w-3xl w-full max-h-90vh overflow-y-auto">
+          <div 
+            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4"
+            onClick={() => setOpen(false)}
+          >
+            <div 
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg max-w-3xl w-full max-h-90vh overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
               <div className="relative">
                 <img 
                   src={selectedItem.image} 
                   alt={selectedItem.title} 
-                  className="w-full aspect-video object-cover"
+                  className="w-full aspect-video object-contain"
                 />
                 <button 
-                  className="absolute top-2 right-2 bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center"
-                  onClick={() => setOpen(false)}
+                  className="absolute top-2 right-2 bg-black bg-opacity-50 text-white rounded-full w-8 h-8 flex items-center justify-center z-10"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setOpen(false);
+                  }}
                 >
                   <i className="fas fa-times"></i>
                 </button>
