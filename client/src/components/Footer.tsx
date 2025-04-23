@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useToast } from '@/hooks/use-toast';
+import { Link } from 'wouter';
 
 interface FooterProps {
   year: number;
@@ -139,21 +140,21 @@ export default function Footer({ year }: FooterProps) {
               <div>
                 <h3 className="text-lg font-bold mb-3 text-white border-b border-gray-700 pb-2">Leistungen</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><a href="#services" className="hover:text-white transition flex items-center">
+                  <li><Link href="/services" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>Web-Entwicklung
-                  </a></li>
-                  <li><a href="#services" className="hover:text-white transition flex items-center">
+                  </Link></li>
+                  <li><Link href="/services" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>Scripting & Logik
-                  </a></li>
-                  <li><a href="#services" className="hover:text-white transition flex items-center">
+                  </Link></li>
+                  <li><Link href="/services" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>Discord Bots
-                  </a></li>
-                  <li><a href="#services" className="hover:text-white transition flex items-center">
+                  </Link></li>
+                  <li><Link href="/services" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>3D Design
-                  </a></li>
-                  <li><a href="#services" className="hover:text-white transition flex items-center">
+                  </Link></li>
+                  <li><Link href="/services" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>Grafikdesign
-                  </a></li>
+                  </Link></li>
                 </ul>
               </div>
               
