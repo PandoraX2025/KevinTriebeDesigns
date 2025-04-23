@@ -8,6 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import SkillsSection from "@/components/SkillsSection";
 import { services } from "@/lib/constants";
 import kiLogo from '../assets/ki-logo.png';
+import ts3Screenshot from '../assets/ts3screenshot.png';
 
 export default function HomePage() {
   // Smooth scrolling for anchor links
@@ -262,27 +263,31 @@ export default function HomePage() {
             </div>
 
             <div className="max-w-4xl mx-auto bg-gray-50 dark:bg-gray-700 rounded-xl shadow-lg p-6 mb-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-5">
                   <div className="text-center md:text-left">
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">Server-Details</h3>
-                    <p className="mb-1 dark:text-gray-300">
-                      <span className="font-medium">Server:</span> 2.59.134.241:9987
-                    </p>
-                    <p className="mb-4 dark:text-gray-300">
-                      <span className="font-medium">Name:</span> Frozen District Services FD Developments
-                    </p>
+                    <h3 className="text-xl font-bold mb-3 dark:text-white">Server-Details</h3>
+                    <div className="bg-white dark:bg-gray-800 p-4 rounded-lg mb-4">
+                      <p className="mb-2 dark:text-gray-300 font-mono">
+                        <span className="font-medium block mb-1">Server-Adresse:</span> 
+                        <span className="text-primary">2.59.134.241:9987</span>
+                      </p>
+                      <p className="dark:text-gray-300 font-mono">
+                        <span className="font-medium block mb-1">Server-Name:</span> 
+                        <span className="text-primary">Frozen District Services FD Developments</span>
+                      </p>
+                    </div>
                   </div>
                   
                   <div className="flex flex-col space-y-3">
                     <a 
                       href="ts3server://2.59.134.241:9987?nickname=FD-Website-Besucher" 
-                      className="flex items-center justify-center bg-primary hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition"
+                      className="flex items-center justify-center bg-primary hover:bg-blue-600 text-white font-medium py-4 px-6 rounded-lg transition text-lg"
                     >
                       <i className="fas fa-headset mr-2"></i>
                       Mit TeamSpeak verbinden
                     </a>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-left">
                       Klicken Sie auf den Button, um direkt mit dem TeamSpeak-Client zu verbinden.
                       <br />Sie benötigen den TeamSpeak 3 Client auf Ihrem Gerät.
                     </p>
@@ -290,21 +295,27 @@ export default function HomePage() {
                   
                   <div className="border-t border-gray-200 dark:border-gray-600 pt-4 mt-4">
                     <h4 className="font-semibold mb-2 dark:text-white">Support-Zeiten:</h4>
-                    <ul className="space-y-1 text-sm dark:text-gray-300">
-                      <li>Mo - Fr: 15:00 - 22:00 Uhr</li>
-                      <li>Sa - So: 12:00 - 20:00 Uhr</li>
-                      <li>Feiertage: Nach Vereinbarung</li>
-                    </ul>
+                    <div className="grid grid-cols-2 gap-2 max-w-sm">
+                      <div className="bg-white/50 dark:bg-gray-800/50 p-2 rounded text-center">
+                        <p className="font-medium text-sm dark:text-white">Mo - Fr</p>
+                        <p className="text-sm dark:text-gray-300">15:00 - 22:00 Uhr</p>
+                      </div>
+                      <div className="bg-white/50 dark:bg-gray-800/50 p-2 rounded text-center">
+                        <p className="font-medium text-sm dark:text-white">Sa - So</p>
+                        <p className="text-sm dark:text-gray-300">12:00 - 20:00 Uhr</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
-                <div className="h-[300px] md:h-[350px] bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
-                  <iframe 
-                    src="https://view.light-speed.com/teamspeak/?server=2.59.134.241&port=9987&nickname=Website-Besucher&fontSize=13&fontFamily=Roboto&hideBackground=true&borderRadius=5"
-                    style={{ width: '100%', height: '100%', border: 'none' }}
-                    title="TeamSpeak 3 Viewer"
-                    loading="lazy"
-                  ></iframe>
+                <div className="flex justify-center">
+                  <div className="border-4 border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg max-w-md">
+                    <img 
+                      src={ts3Screenshot} 
+                      alt="TeamSpeak 3 Server Struktur" 
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
