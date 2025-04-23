@@ -6,6 +6,7 @@ import ServiceCard from "@/components/ServiceCard";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import SkillsSection from "@/components/SkillsSection";
+import TeamSpeakViewer from "@/components/TeamSpeakViewer";
 import { services } from "@/lib/constants";
 import kiLogo from '../assets/ki-logo.png';
 

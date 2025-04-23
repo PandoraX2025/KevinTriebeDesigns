@@ -6,13 +6,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ThemeToggle";
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/HomePage";
-import TeamSpeakPage from "@/pages/TeamSpeakPage";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={HomePage} />
-      <Route path="/teamspeak" component={TeamSpeakPage} />
       <Route component={NotFound} />
     </Switch>
   );
