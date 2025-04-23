@@ -7,6 +7,8 @@ const luaScriptingImage = "/src/assets/lua-scripting.png";
 const codewalkerImage = "/src/assets/codewalker-beispiel.jpg";
 const blenderCarImage = "/src/assets/blender-car-beispiel.jpeg";
 const webdesignImage = "/src/assets/webdesign-beispiel.png";
+const gtaHudImage = "/src/assets/grafik-design-hut-gtafiveM.png";
+const gtaHudCodeImage = "/src/assets/fdd-lifehudclient-code.PNG";
 
 // Typen für Portfolio-Projekte
 interface PortfolioItem {
@@ -15,6 +17,7 @@ interface PortfolioItem {
   description: string;
   image: string;
   category: 'web' | 'script' | '3d' | 'design';
+  codeImage?: string; // Optionales Bild für Code-Beispiele
 }
 
 // Portfolio-Projekte
@@ -53,6 +56,14 @@ const portfolioItems: PortfolioItem[] = [
     description: "Eine der ersten Webdesign-Arbeiten - ein CSS-Stylesheet für eine Portfolio-Webseite. Das Design umfasst moderne Gestaltungselemente wie abgerundete Ecken, Schatten-Effekte und ein sorgfältig abgestimmtes Farbschema. Der Code zeigt die strukturierte Herangehensweise an CSS-Styling mit verschiedenen Selektoren und Klassen.",
     image: webdesignImage,
     category: 'web'
+  },
+  {
+    id: 6,
+    title: "FiveM Life-HUD mit Lua Code",
+    description: "Ein selbst entwickeltes HUD-System (Head-Up-Display) für GTA FiveM Server, programmiert in Lua. Die Benutzeroberfläche zeigt wichtige Spieler-Statuswerte wie Gesundheit, Rüstung, Hunger, Durst, Temperatur und Ausdauer in Echtzeit an. Die Programmlogik umfasst ESX-Framework-Integration, Waffenerkennung und dynamische Status-Updates in einem übersichtlichen, modernen Design.",
+    image: gtaHudImage,
+    codeImage: gtaHudCodeImage,
+    category: 'design'
   }
 ];
 
@@ -171,7 +182,7 @@ export default function Portfolio() {
             <div className="p-6">
               <h2 className="text-2xl font-bold dark:text-white mb-2">{selectedItem.title}</h2>
               <p className="text-gray-600 dark:text-gray-400 mb-4">{selectedItem.description}</p>
-              <div className="flex gap-2">
+              <div className="flex gap-2 mb-4">
                 <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
                   {selectedItem.category === 'web' && 'Webentwicklung'}
                   {selectedItem.category === 'script' && 'Scripting'}
@@ -179,6 +190,20 @@ export default function Portfolio() {
                   {selectedItem.category === 'design' && 'Grafikdesign'}
                 </span>
               </div>
+              
+              {/* Code-Screenshot anzeigen, falls vorhanden */}
+              {selectedItem.codeImage && (
+                <div className="mt-4">
+                  <h3 className="text-lg font-semibold dark:text-white mb-2">Code-Beispiel:</h3>
+                  <div className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+                    <img 
+                      src={selectedItem.codeImage} 
+                      alt={`Code für ${selectedItem.title}`} 
+                      className="w-full object-contain"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
