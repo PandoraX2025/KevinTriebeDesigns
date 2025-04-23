@@ -69,7 +69,7 @@ export default function Testimonials() {
   // Mutation für das Absenden eines neuen Testimonials
   const submitMutation = useMutation({
     mutationFn: (values: Omit<TestimonialFormValues, 'privacyAccepted'>) => {
-      return apiRequest('/api/testimonials', 'POST', values);
+      return apiRequest('POST', '/api/testimonials', values);
     },
     onSuccess: () => {
       toast({
@@ -168,7 +168,7 @@ export default function Testimonials() {
                 {/* Indikator für aktives Testimonial */}
                 {displayTestimonials.length > 1 && (
                   <div className="flex justify-center mt-6 space-x-2">
-                    {displayTestimonials.map((_: TestimonialItem, index: number) => (
+                    {displayTestimonials.map((_, index) => (
                       <button
                         key={index}
                         onClick={() => setActiveIndex(index)}
