@@ -1,0 +1,8 @@
+// Bilder importieren
+import discordBotImg from '/public/portfolio/discord-bot.png';
+import luaScriptingImg from '/public/portfolio/lua-scripting.png'; 
+import codewalkerImg from '/public/portfolio/codewalker.jpg';
+import blenderCarImg from '/public/portfolio/blender-car.jpeg';
+import webdesignImg from '/public/portfolio/webdesign.png';
+import gtaHudImg from '/public/portfolio/gta-hud.png';
+import gtaHudCodeImg from '/public/portfolio/gta-hud-code.png';
