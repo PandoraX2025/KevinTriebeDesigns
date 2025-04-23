@@ -6,7 +6,6 @@ import ServiceCard from "@/components/ServiceCard";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import SkillsSection from "@/components/SkillsSection";
-import TeamSpeakViewer from "@/components/TeamSpeakViewer";
 import { services } from "@/lib/constants";
 import kiLogo from '../assets/ki-logo.png';
 
@@ -248,6 +247,66 @@ export default function HomePage() {
             
             <div className="max-w-5xl mx-auto">
               <Testimonials />
+            </div>
+          </div>
+        </section>
+
+        {/* TeamSpeak Support Section */}
+        <section id="teamspeak" className="py-12 md:py-16 bg-white dark:bg-gray-800">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-3 md:mb-4 dark:text-white">TeamSpeak Support</h2>
+              <p className="text-base md:text-lg max-w-2xl mx-auto dark:text-gray-300 text-gray-600">
+                Verbinden Sie sich mit unserem TeamSpeak Server für direkten Support
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto bg-gray-50 dark:bg-gray-700 rounded-xl shadow-lg p-6 mb-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <div className="text-center md:text-left">
+                    <h3 className="text-xl font-bold mb-2 dark:text-white">Server-Details</h3>
+                    <p className="mb-1 dark:text-gray-300">
+                      <span className="font-medium">Server:</span> 2.59.134.241:9987
+                    </p>
+                    <p className="mb-4 dark:text-gray-300">
+                      <span className="font-medium">Name:</span> Frozen District Services FD Developments
+                    </p>
+                  </div>
+                  
+                  <div className="flex flex-col space-y-3">
+                    <a 
+                      href="ts3server://2.59.134.241:9987?nickname=FD-Website-Besucher" 
+                      className="flex items-center justify-center bg-primary hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition"
+                    >
+                      <i className="fas fa-headset mr-2"></i>
+                      Mit TeamSpeak verbinden
+                    </a>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
+                      Klicken Sie auf den Button, um direkt mit dem TeamSpeak-Client zu verbinden.
+                      <br />Sie benötigen den TeamSpeak 3 Client auf Ihrem Gerät.
+                    </p>
+                  </div>
+                  
+                  <div className="border-t border-gray-200 dark:border-gray-600 pt-4 mt-4">
+                    <h4 className="font-semibold mb-2 dark:text-white">Support-Zeiten:</h4>
+                    <ul className="space-y-1 text-sm dark:text-gray-300">
+                      <li>Mo - Fr: 15:00 - 22:00 Uhr</li>
+                      <li>Sa - So: 12:00 - 20:00 Uhr</li>
+                      <li>Feiertage: Nach Vereinbarung</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="h-[300px] md:h-[350px] bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
+                  <iframe 
+                    src="https://view.light-speed.com/teamspeak/?server=2.59.134.241&port=9987&nickname=Website-Besucher&fontSize=13&fontFamily=Roboto&hideBackground=true&borderRadius=5"
+                    style={{ width: '100%', height: '100%', border: 'none' }}
+                    title="TeamSpeak 3 Viewer"
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </section>
