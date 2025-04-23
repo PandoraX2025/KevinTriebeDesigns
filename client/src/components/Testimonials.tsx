@@ -16,27 +16,8 @@ interface TestimonialItem {
   createdAt?: string;
 }
 
-// Fallback-Testimonials für den Fall, dass keine von der API geladen werden können
-const fallbackTestimonials: TestimonialItem[] = [
-  {
-    id: 1,
-    name: "Max Mustermann",
-    serviceType: "GTA RP Server-Besitzer",
-    content: "Die Zusammenarbeit mit FD Developments war ausgezeichnet. Das Team hat für unseren Rollenspiel-Server ein maßgeschneidertes HUD-System entwickelt, das alle unsere Anforderungen erfüllt und bei unseren Spielern sehr gut ankommt."
-  },
-  {
-    id: 2,
-    name: "Laura Schmidt",
-    serviceType: "Startup-Gründerin",
-    content: "Kevin hat für mein Startup eine beeindruckende Webseite entwickelt. Das moderne Design und die Benutzerfreundlichkeit haben unsere Erwartungen übertroffen."
-  },
-  {
-    id: 3,
-    name: "Thomas Weber",
-    serviceType: "Community Manager",
-    content: "Der Discord-Bot, den FD Developments für unsere Gaming-Community programmiert hat, ist ein echter Game-Changer. Die Integration aller gewünschten Funktionen sowie die zuverlässige Performance haben uns überzeugt."
-  }
-];
+// Leeres Array für Testimonials, wenn keine von der API geladen werden können
+const fallbackTestimonials: TestimonialItem[] = [];
 
 // Schema für das Testimonial-Formular
 const testimonialFormSchema = z.object({
@@ -88,10 +69,7 @@ export default function Testimonials() {
   // Mutation für das Absenden eines neuen Testimonials
   const submitMutation = useMutation({
     mutationFn: (values: Omit<TestimonialFormValues, 'privacyAccepted'>) => {
-      return apiRequest('/api/testimonials', {
-        method: 'POST',
-        body: JSON.stringify(values)
-      });
+      return apiRequest('/api/testimonials', 'POST', values);
     },
     onSuccess: () => {
       toast({
@@ -190,7 +168,7 @@ export default function Testimonials() {
                 {/* Indikator für aktives Testimonial */}
                 {displayTestimonials.length > 1 && (
                   <div className="flex justify-center mt-6 space-x-2">
-                    {displayTestimonials.map((_, index) => (
+                    {displayTestimonials.map((_: TestimonialItem, index: number) => (
                       <button
                         key={index}
                         onClick={() => setActiveIndex(index)}
