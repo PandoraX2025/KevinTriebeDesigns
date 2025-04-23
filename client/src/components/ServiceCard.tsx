@@ -31,8 +31,8 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         {service.programLogos && service.programLogos.length > 0 && (
           <div className="absolute top-2 right-2 flex space-x-2">
             {service.programLogos.map((logo, index) => (
-              <div key={index} className="w-12 h-12 bg-white dark:bg-gray-800 rounded-full p-1 shadow-md flex items-center justify-center">
-                <img src={logo} alt="Program Logo" className="max-w-full max-h-full object-contain" />
+              <div key={index} className="w-12 h-12 flex items-center justify-center">
+                <img src={logo} alt="Program Logo" className="max-w-full max-h-full object-contain shadow-md" />
               </div>
             ))}
           </div>
