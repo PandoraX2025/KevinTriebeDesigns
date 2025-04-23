@@ -40,12 +40,7 @@ export default function Navbar() {
                     <i className="fas fa-headset mr-1 text-xs"></i>
                     TeamSpeak
                   </a>
-                  <a 
-                    href="https://discord.gg/qEy8xf6CyV" 
-                    target="_blank" 
-                    rel="noreferrer" 
-                    className="px-3 py-1 font-medium text-[#5865F2] hover:text-primary transition text-sm flex items-center"
-                  >
+                  <a href="#discord" className="px-3 py-1 font-medium text-[#5865F2] hover:text-primary transition text-sm flex items-center">
                     <i className="fab fa-discord mr-1 text-xs"></i> Discord
                   </a>
                 </div>
@@ -126,9 +121,7 @@ export default function Navbar() {
             <i className="fas fa-headset mr-2"></i> TeamSpeak
           </a>
           <a 
-            href="https://discord.gg/qEy8xf6CyV" 
-            target="_blank" 
-            rel="noreferrer" 
+            href="#discord" 
             className="px-3 py-2 rounded-md font-medium text-[#5865F2] hover:bg-gray-200 dark:hover:bg-gray-800 transition"
             onClick={() => setMobileMenuOpen(false)}
           >

@@ -6,6 +6,7 @@ import ServiceCard from "@/components/ServiceCard";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import SkillsSection from "@/components/SkillsSection";
+import DiscordWidget from "@/components/DiscordWidget";
 import { services } from "@/lib/constants";
 import kiLogo from '../assets/ki-logo.png';
 import ts3Screenshot from '../assets/ts3screenshot.png';
@@ -316,6 +317,77 @@ export default function HomePage() {
                       className="w-full h-auto"
                     />
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Discord Section */}
+        <section id="discord" className="py-12 md:py-16 bg-gray-50 dark:bg-gray-900">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-3 md:mb-4 dark:text-white">Discord Server</h2>
+              <p className="text-base md:text-lg max-w-2xl mx-auto dark:text-gray-300 text-gray-600">
+                Treten Sie unserem Discord-Server bei für Updates, Community und schnellen Support
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-5">
+                  <div className="text-center md:text-left">
+                    <h3 className="text-xl font-bold mb-3 dark:text-white">FD Developments and Design's Server</h3>
+                    <p className="dark:text-gray-300 text-gray-600 text-sm md:text-base mb-4">
+                      Unser Discord-Server ist der zentrale Anlaufpunkt für unsere Community, wo wir Updates teilen, Support anbieten und uns mit unseren Kunden austauschen.
+                    </p>
+                  </div>
+                  
+                  <div className="flex flex-col space-y-3">
+                    <a 
+                      href="https://discord.gg/qEy8xf6CyV" 
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center justify-center bg-[#5865F2] hover:bg-[#4752c4] text-white font-medium py-4 px-6 rounded-lg transition text-lg"
+                    >
+                      <i className="fab fa-discord mr-2 text-xl"></i>
+                      Discord-Server beitreten
+                    </a>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 text-center md:text-left">
+                      Klicken Sie auf den Button, um direkt eine Einladung zu unserem Discord-Server zu erhalten.
+                    </p>
+                  </div>
+                  
+                  <div className="border-t border-gray-200 dark:border-gray-600 pt-4 mt-4">
+                    <h4 className="font-semibold mb-2 dark:text-white">Was Sie auf unserem Discord finden:</h4>
+                    <ul className="space-y-1 text-sm dark:text-gray-300 text-gray-600">
+                      <li className="flex items-start">
+                        <i className="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                        Support-Kanäle für schnelle Hilfe
+                      </li>
+                      <li className="flex items-start">
+                        <i className="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                        Projekt-Updates und Ankündigungen
+                      </li>
+                      <li className="flex items-start">
+                        <i className="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                        Community-Bereich für den Austausch
+                      </li>
+                      <li className="flex items-start">
+                        <i className="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                        Direkte Kommunikation mit unserem Team
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="flex justify-center h-[400px]">
+                  <DiscordWidget 
+                    serverId="1358889877562855494"
+                    theme="dark" 
+                    width="100%" 
+                    height="100%" 
+                  />
                 </div>
               </div>
             </div>
