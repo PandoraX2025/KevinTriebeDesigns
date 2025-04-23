@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
+import { Link } from "wouter";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,6 +26,7 @@ export default function Navbar() {
           <a href="#portfolio" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Portfolio</a>
           <a href="#about" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Über uns</a>
           <a href="#contact" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Kontakt</a>
+          <Link href="/teamspeak" className="font-medium text-blue-600 dark:text-blue-400 hover:text-primary dark:hover:text-primary transition">TeamSpeak</Link>
           <a 
             href="https://discord.gg/qEy8xf6CyV" 
             target="_blank" 
@@ -97,6 +99,13 @@ export default function Navbar() {
           >
             Kontakt
           </a>
+          <Link 
+            href="/teamspeak" 
+            className="px-3 py-2 rounded-md font-medium text-blue-600 dark:text-blue-400 hover:bg-gray-200 dark:hover:bg-gray-800 transition"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            TeamSpeak
+          </Link>
           <a 
             href="https://discord.gg/qEy8xf6CyV" 
             target="_blank" 
