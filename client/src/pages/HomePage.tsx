@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import Portfolio from "@/components/Portfolio";
+import Testimonials from "@/components/Testimonials";
+import SkillsSection from "@/components/SkillsSection";
 import { services } from "@/lib/constants";
 import kiLogo from '../assets/ki-logo.png';
 
@@ -149,6 +151,22 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Skills Section */}
+        <section id="skills" className="py-12 md:py-16 bg-gray-50 dark:bg-gray-900">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-3 md:mb-4 dark:text-white">Technische Kenntnisse</h2>
+              <p className="text-base md:text-lg max-w-2xl mx-auto dark:text-gray-300 text-gray-600">
+                Unsere Expertise in verschiedenen Technologien und Tools
+              </p>
+            </div>
+            
+            <div className="max-w-6xl mx-auto">
+              <SkillsSection />
+            </div>
+          </div>
+        </section>
+
         {/* About Section */}
         <section id="about" className="py-12 md:py-16 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4">
@@ -213,6 +231,22 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section id="testimonials" className="py-12 md:py-16 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-3 md:mb-4 dark:text-white">Kundenmeinungen</h2>
+              <p className="text-base md:text-lg max-w-2xl mx-auto dark:text-gray-300 text-gray-600">
+                Was unsere Kunden über uns und unsere Arbeit sagen
+              </p>
+            </div>
+            
+            <div className="max-w-5xl mx-auto">
+              <Testimonials />
             </div>
           </div>
         </section>
