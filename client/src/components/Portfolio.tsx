@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 const discordBotImage = "/src/assets/discord-bots.png";
 const luaScriptingImage = "/src/assets/lua-scripting.png";
 const codewalkerImage = "/src/assets/codewalker-beispiel.jpg";
+const blenderCarImage = "/src/assets/blender-car-beispiel.jpeg";
 
 // Typen für Portfolio-Projekte
 interface PortfolioItem {
@@ -36,6 +37,13 @@ const portfolioItems: PortfolioItem[] = [
     title: "GTA Farmhaus 3D-Mapping",
     description: "3D-Mapping eines Farmhauses mit Umgebung für einen GTA V Rollenspiel-Server mit Codewalker. Detaillierte Umgebungsgestaltung mit natürlicher Vegetation, Zäunen und realistischer Terrainmodellierung. Das Projekt umfasst Objekt-Platzierung, Lichteffekte und nahtlose Integration in die bestehende Spielwelt.",
     image: codewalkerImage,
+    category: '3d'
+  },
+  {
+    id: 4,
+    title: "Blender Auto-Modell",
+    description: "Ein mit Blender modelliertes und bearbeitetes Auto-Modell für einen GTA V Rollenspiel-Server. Das Modell wurde so angepasst, dass es ohne rechtliche Probleme verwendet werden kann. Die 3D-Modellierung umfasst detaillierte Geometrie, Texturen und Physik-Eigenschaften für eine realistische Integration in die Spielwelt.",
+    image: blenderCarImage,
     category: '3d'
   }
 ];
