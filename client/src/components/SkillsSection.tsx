@@ -9,24 +9,24 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  // Programmierung
-  { name: 'HTML/CSS/JavaScript', level: 95, category: 'programming' },
-  { name: 'React', level: 90, category: 'programming' },
-  { name: 'Lua Scripting', level: 95, category: 'programming' },
-  { name: 'Python', level: 80, category: 'programming' },
-  { name: 'TypeScript', level: 85, category: 'programming' },
+  // Programmierung - ehrlicher Ansatz
+  { name: 'HTML/CSS/JavaScript', level: 25, category: 'programming' },
+  { name: 'React', level: 25, category: 'programming' },
+  { name: 'Lua Scripting', level: 25, category: 'programming' },
+  { name: 'Python', level: 25, category: 'programming' },
+  { name: 'TypeScript', level: 25, category: 'programming' },
   
-  // Design
-  { name: 'Photoshop', level: 85, category: 'design' },
-  { name: 'GIMP', level: 80, category: 'design' },
-  { name: 'UI/UX Design', level: 85, category: 'design' },
-  { name: 'Grafikdesign', level: 75, category: 'design' },
+  // Design - realistische Werte
+  { name: 'Photoshop', level: 50, category: 'design' },
+  { name: 'GIMP', level: 60, category: 'design' },
+  { name: 'UI/UX Design', level: 50, category: 'design' },
+  { name: 'Grafikdesign', level: 50, category: 'design' },
   
   // Tools & Technologien
   { name: 'Blender 3D', level: 70, category: 'tools' },
   { name: 'Codewalker', level: 90, category: 'tools' },
-  { name: 'FiveM Framework', level: 95, category: 'tools' },
-  { name: 'Git & GitHub', level: 75, category: 'tools' },
+  { name: 'FiveM Framework', level: 50, category: 'tools' },
+  { name: 'Git & GitHub', level: 25, category: 'tools' },
 ];
 
 export default function SkillsSection() {
@@ -38,7 +38,10 @@ export default function SkillsSection() {
   return (
     <section className="py-16 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">Technische Kenntnisse</h2>
+        <h2 className="text-3xl font-bold text-center mb-6 dark:text-white">Technische Kenntnisse</h2>
+        <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
+          Wir sind dabei, unsere Fähigkeiten kontinuierlich zu erweitern. Hier zeigen wir ehrlich, wo wir aktuell stehen und in welchen Bereichen wir bereits Erfahrung gesammelt haben.
+        </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Programmierung */}
