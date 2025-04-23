@@ -5,6 +5,8 @@ import luaLogo from '../assets/lua-logo.png';
 import pythonLogo from '../assets/python-logo.png';
 import scriptingCodeImage from '../assets/scripting-code.jpg';
 import webDevLogo from '../assets/web-dev-logo.jpg';
+import gimpLogo from '../assets/gimp-logo.jpg';
+import photoshopLogo from '../assets/photoshop-logo.jpg';
 
 // Hintergrundbilder für Services
 const webDevBg = "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80";
@@ -69,8 +71,9 @@ export const services = [
       { text: "UI/UX Design-Elemente" }
     ],
     image: graphicDesignBg,
+    secondaryImage: photoshopLogo,
     gradientFrom: "amber-400",
     gradientTo: "orange-500",
-    programLogos: []
+    programLogos: [photoshopLogo, gimpLogo]
   }
 ];
