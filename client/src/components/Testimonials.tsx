@@ -5,6 +5,7 @@ import { z } from 'zod';
 import { useToast } from '@/hooks/use-toast';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { apiRequest } from '@/lib/queryClient';
+import { getAdminStatus } from './Footer';
 
 // Definiere die Struktur eines Testimonials
 interface TestimonialItem {
@@ -35,8 +36,17 @@ type TestimonialFormValues = z.infer<typeof testimonialFormSchema>;
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [showForm, setShowForm] = useState(false);
+  const [adminState, setAdminState] = useState(getAdminStatus());
   const { toast } = useToast();
   const queryClient = useQueryClient();
+  
+  // Aktualisiere Admin-Status alle 2 Sekunden
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAdminState(getAdminStatus());
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Hole Testimonials von der API
   const { data: testimonials = [], isLoading, isError } = useQuery({
@@ -74,11 +84,12 @@ export default function Testimonials() {
     onSuccess: () => {
       toast({
         title: "Erfolgreich eingereicht",
-        description: "Vielen Dank für Ihre Bewertung! Sie wird nach Überprüfung veröffentlicht.",
+        description: "Vielen Dank für Ihre Bewertung! Sie wurde erfolgreich veröffentlicht.",
       });
       form.reset();
       setShowForm(false);
-      // Kein Invalidieren des Caches notwendig, da neue Testimonials erst nach Genehmigung angezeigt werden
+      // Jetzt invalidieren wir den Cache, da Testimonials sofort angezeigt werden
+      queryClient.invalidateQueries({ queryKey: ['/api/testimonials'] });
     },
     onError: (error) => {
       toast({
@@ -87,6 +98,36 @@ export default function Testimonials() {
         variant: "destructive"
       });
       console.error("Testimonial submission error:", error);
+    }
+  });
+  
+  // Mutation zum Löschen eines Testimonials (nur für Admin)
+  const deleteMutation = useMutation({
+    mutationFn: async (id: number) => {
+      const credentials = {
+        username: 'pandorax',
+        password: '2014201620162023'
+      };
+      
+      return apiRequest('DELETE', `/api/testimonials/${id}`, credentials);
+    },
+    onSuccess: () => {
+      toast({
+        title: "Erfolgreich gelöscht",
+        description: "Die Bewertung wurde erfolgreich gelöscht.",
+      });
+      queryClient.invalidateQueries({ queryKey: ['/api/testimonials'] });
+      if (activeIndex >= displayTestimonials.length - 1) {
+        setActiveIndex(Math.max(0, displayTestimonials.length - 2));
+      }
+    },
+    onError: (error) => {
+      toast({
+        title: "Fehler beim Löschen",
+        description: "Es gab ein Problem beim Löschen der Bewertung.",
+        variant: "destructive"
+      });
+      console.error("Testimonial deletion error:", error);
     }
   });
 
