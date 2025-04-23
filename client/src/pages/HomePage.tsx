@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import ContactForm from "@/components/ContactForm";
 import { services } from "@/lib/constants";
+import kiLogo from '../assets/ki-logo.png';
 
 export default function HomePage() {
   // Smooth scrolling for anchor links
@@ -83,6 +84,52 @@ export default function HomePage() {
               {services.map((service, index) => (
                 <ServiceCard key={index} service={service} />
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* KI/AI Section */}
+        <section id="ai" className="py-16 bg-white dark:bg-gray-800">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <img 
+                    src={kiLogo}
+                    alt="Künstliche Intelligenz" 
+                    className="w-full max-w-md mx-auto"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 dark:text-white">
+                    KI-gestützte Entwicklung
+                  </h2>
+                  <p className="text-lg mb-4 dark:text-gray-300 text-gray-600">
+                    Wir nutzen moderne KI-Tools und -Technologien, um effizienter zu arbeiten und bessere Ergebnisse zu erzielen. Künstliche Intelligenz unterstützt uns in verschiedenen Phasen unserer Projektentwicklung.
+                  </p>
+                  <div className="space-y-4 mb-6">
+                    <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                      <h3 className="font-bold mb-2 text-xl dark:text-white">Warum wir KI nutzen</h3>
+                      <p className="dark:text-gray-300 text-gray-600">
+                        Künstliche Intelligenz ermöglicht uns, repetitive Aufgaben zu automatisieren, Code schneller zu schreiben, kreative Designs zu generieren und komplexe Probleme effizienter zu lösen - so können wir uns auf den kreativen Prozess und individuelle Kundenbedürfnisse konzentrieren.
+                      </p>
+                    </div>
+                    <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                      <h3 className="font-bold mb-2 text-xl dark:text-white">Unsere KI-Tools</h3>
+                      <ul className="list-disc pl-5 dark:text-gray-300 text-gray-600 space-y-1">
+                        <li><span className="font-medium">Replit</span> - für kollaborative Softwareentwicklung</li>
+                        <li><span className="font-medium">ChatGPT</span> - für Codeoptimierung und kreative Inhalte</li>
+                        <li><span className="font-medium">Google AI Studio</span> - für spezialisierte Aufgaben</li>
+                        <li><span className="font-medium">Bolt</span> - für schnelle Prototypentwicklung</li>
+                        <li><span className="font-medium">Claude</span> - für komplexe Analysen und Textgenerierung</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <p className="text-sm italic dark:text-gray-400 text-gray-500">
+                    Wir setzen KI als Unterstützungswerkzeug ein - die kreative Leitung, Qualitätskontrolle und persönliche Betreuung bleiben immer in menschlicher Hand.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

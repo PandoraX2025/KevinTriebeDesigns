@@ -41,6 +41,7 @@ export default function Footer({ year }: FooterProps) {
             <ul className="space-y-2 text-gray-300">
               <li><a href="#home" className="hover:text-white transition">Startseite</a></li>
               <li><a href="#services" className="hover:text-white transition">Leistungen</a></li>
+              <li><a href="#ai" className="hover:text-white transition">KI-Entwicklung</a></li>
               <li><a href="#about" className="hover:text-white transition">Über uns</a></li>
               <li><a href="#contact" className="hover:text-white transition">Kontakt</a></li>
               <li><a href="https://discord.gg/qEy8xf6CyV" target="_blank" rel="noreferrer" className="hover:text-white transition">Discord Server</a></li>

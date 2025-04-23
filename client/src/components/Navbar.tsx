@@ -20,6 +20,7 @@ export default function Navbar() {
         <nav className="hidden md:flex space-x-6 items-center">
           <a href="#home" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Startseite</a>
           <a href="#services" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Leistungen</a>
+          <a href="#ai" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">KI-Entwicklung</a>
           <a href="#about" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Über uns</a>
           <a href="#contact" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Kontakt</a>
           <a 
@@ -61,6 +62,13 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
           >
             Leistungen
+          </a>
+          <a 
+            href="#ai" 
+            className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            KI-Entwicklung
           </a>
           <a 
             href="#about" 
