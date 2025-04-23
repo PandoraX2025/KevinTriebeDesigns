@@ -8,20 +8,20 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-40 backdrop-blur-md bg-light-bg/80 dark:bg-dark-bg/80 shadow-sm border-b border-gray-200 dark:border-gray-800">
+    <header className="sticky top-0 z-40 backdrop-blur-md bg-white/90 dark:bg-gray-900/90 shadow-sm border-b border-gray-200 dark:border-gray-800">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#home" className="text-xl md:text-2xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+          <a href="#home" className="text-xl md:text-2xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-700">
             FD Developments
           </a>
         </div>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 items-center">
-          <a href="#home" className="font-medium hover:text-primary dark:hover:text-primary transition">Startseite</a>
-          <a href="#services" className="font-medium hover:text-primary dark:hover:text-primary transition">Leistungen</a>
-          <a href="#about" className="font-medium hover:text-primary dark:hover:text-primary transition">Über uns</a>
-          <a href="#contact" className="font-medium hover:text-primary dark:hover:text-primary transition">Kontakt</a>
+          <a href="#home" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Startseite</a>
+          <a href="#services" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Leistungen</a>
+          <a href="#about" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Über uns</a>
+          <a href="#contact" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Kontakt</a>
           <a 
             href="https://discord.gg/qEy8xf6CyV" 
             target="_blank" 
@@ -46,32 +46,32 @@ export default function Navbar() {
       </div>
       
       {/* Mobile Navigation */}
-      <div className={`md:hidden bg-light-bg dark:bg-dark-bg pb-4 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
+      <div className={`md:hidden bg-white dark:bg-gray-900 pb-4 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="flex flex-col px-4 pt-2 pb-3 space-y-3">
           <a 
             href="#home" 
-            className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-dark-card transition"
+            className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
             onClick={() => setMobileMenuOpen(false)}
           >
             Startseite
           </a>
           <a 
             href="#services" 
-            className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-dark-card transition"
+            className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
             onClick={() => setMobileMenuOpen(false)}
           >
             Leistungen
           </a>
           <a 
             href="#about" 
-            className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-dark-card transition"
+            className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
             onClick={() => setMobileMenuOpen(false)}
           >
             Über uns
           </a>
           <a 
             href="#contact" 
-            className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-dark-card transition"
+            className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
             onClick={() => setMobileMenuOpen(false)}
           >
             Kontakt

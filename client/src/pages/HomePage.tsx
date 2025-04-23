@@ -143,9 +143,9 @@ export default function HomePage() {
                       </li>
                       <li className="flex items-center">
                         <div className="w-8 h-8 bg-secondary rounded-full text-white flex items-center justify-center mr-3">
-                          <span className="font-bold">FD</span>
+                          <span className="font-bold">WS</span>
                         </div>
-                        Partner Developer - Design & Entwicklung
+                        Winter Scripts - Partner Developer
                       </li>
                     </ul>
                   </div>
@@ -167,16 +167,16 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
               {/* Contact Form */}
-              <div className="bg-white dark:bg-dark-card rounded-xl shadow-md p-6">
-                <h3 className="text-xl font-bold mb-6">Nachricht senden</h3>
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+                <h3 className="text-xl font-bold mb-6 dark:text-white">Nachricht senden</h3>
                 <ContactForm />
               </div>
 
               {/* Contact Info & Social Links */}
               <div className="space-y-8">
                 {/* Contact Info */}
-                <div className="bg-white dark:bg-dark-card rounded-xl shadow-md p-6">
-                  <h3 className="text-xl font-bold mb-6">Kontaktdaten</h3>
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+                  <h3 className="text-xl font-bold mb-6 dark:text-white">Kontaktdaten</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start">
                       <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg mr-4 text-primary">

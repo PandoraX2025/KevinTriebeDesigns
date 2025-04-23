@@ -1,4 +1,8 @@
 import blender3dImage from '../assets/blender3d.jpg';
+import blenderLogo from '../assets/blender-logo.png';
+import codewalkerLogo from '../assets/codewalker-logo.png'; 
+import luaLogo from '../assets/lua-logo.png';
+import pythonLogo from '../assets/python-logo.png';
 
 export const services = [
   {
