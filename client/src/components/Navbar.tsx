@@ -22,6 +22,7 @@ export default function Navbar() {
           <a href="#home" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Startseite</a>
           <a href="#services" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Leistungen</a>
           <a href="#ai" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">KI-Entwicklung</a>
+          <a href="#portfolio" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Portfolio</a>
           <a href="#about" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Über uns</a>
           <a href="#contact" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Kontakt</a>
           <a 
@@ -74,6 +75,13 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
           >
             KI-Entwicklung
+          </a>
+          <a 
+            href="#portfolio" 
+            className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Portfolio
           </a>
           <a 
             href="#about" 

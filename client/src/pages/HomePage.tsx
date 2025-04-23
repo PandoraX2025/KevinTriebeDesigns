@@ -3,6 +3,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
+import Portfolio from "@/components/Portfolio";
 import { services } from "@/lib/constants";
 import kiLogo from '../assets/ki-logo.png';
 
@@ -128,6 +129,22 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Portfolio Section */}
+        <section id="portfolio" className="py-12 md:py-16 bg-white dark:bg-gray-800">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-3 md:mb-4 dark:text-white">Unser Portfolio</h2>
+              <p className="text-base md:text-lg max-w-2xl mx-auto dark:text-gray-300 text-gray-600">
+                Entdecken Sie eine Auswahl unserer Projekte aus den Bereichen Webentwicklung, Scripting, 3D-Design und Grafikdesign
+              </p>
+            </div>
+            
+            <div className="max-w-6xl mx-auto">
+              <Portfolio />
             </div>
           </div>
         </section>
