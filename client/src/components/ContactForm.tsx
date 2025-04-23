@@ -44,16 +44,16 @@ export default function ContactForm() {
       window.open(mailtoLink, '_blank');
       
       toast({
-        title: "Fertig!",
-        description: "Das E-Mail-Programm sollte sich öffnen. Bitte senden Sie Ihre Nachricht von dort aus.",
+        title: "Angebot angefordert!",
+        description: "Das E-Mail-Programm sollte sich öffnen. Bitte senden Sie Ihre Anfrage von dort aus.",
         variant: "default",
       });
       
       form.reset();
     } catch (error) {
       toast({
-        title: "Fehler",
-        description: "Es gab ein Problem. Bitte senden Sie eine E-Mail an kevintriebe2025@gmail.com.",
+        title: "Fehler beim Anfordern",
+        description: "Es gab ein Problem. Bitte senden Sie eine Anfrage direkt an kevintriebe2025@gmail.com.",
         variant: "destructive",
       });
       console.error("Contact form error:", error);
@@ -109,7 +109,7 @@ export default function ContactForm() {
               <FormLabel className="text-sm font-medium dark:text-gray-300 text-gray-700">Betreff</FormLabel>
               <FormControl>
                 <Input 
-                  placeholder="Betreff Ihrer Nachricht" 
+                  placeholder="Anfrage für ein Angebot" 
                   {...field}
                   className="w-full px-4 py-2 rounded-lg border dark:border-gray-700 bg-gray-50 dark:bg-gray-800 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
                 />
@@ -143,7 +143,7 @@ export default function ContactForm() {
           disabled={isSubmitting}
           className="w-full bg-primary hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition"
         >
-          {isSubmitting ? "E-Mail wird vorbereitet..." : "E-Mail öffnen"}
+          {isSubmitting ? "Angebot wird vorbereitet..." : "Angebot einholen"}
         </Button>
       </form>
     </Form>
