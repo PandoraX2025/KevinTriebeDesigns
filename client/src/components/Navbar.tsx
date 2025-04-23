@@ -59,13 +59,13 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       <div className={`md:hidden bg-white dark:bg-gray-900 pb-4 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="flex flex-col px-4 pt-2 pb-3 space-y-3">
-          <a 
-            href="#home" 
+          <Link 
+            href="/" 
             className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
             onClick={() => setMobileMenuOpen(false)}
           >
             Startseite
-          </a>
+          </Link>
           <a 
             href="#services" 
             className="px-3 py-2 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-800 dark:text-gray-200 transition"
