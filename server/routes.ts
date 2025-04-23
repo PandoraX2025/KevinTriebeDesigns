@@ -1,4 +1,4 @@
-import type { Express } from "express";
+import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import nodemailer from "nodemailer";
@@ -7,6 +7,7 @@ import { z } from "zod";
 import { fromZodError } from "zod-validation-error";
 import testimonialsRouter from "./routes/testimonials";
 import adminRouter from "./routes/admin";
+import path from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Testimonials API-Routen

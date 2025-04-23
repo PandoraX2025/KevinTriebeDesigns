@@ -20,13 +20,15 @@ export default function Navbar() {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-4 items-center">
-          <a href="#home" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Startseite</a>
+          <Link href="/" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Startseite</Link>
           <a href="#services" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Leistungen</a>
           <a href="#ai" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">KI-Entwicklung</a>
           <a href="#portfolio" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Portfolio</a>
           <a href="#about" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Über uns</a>
           <a href="#contact" className="font-medium dark:text-gray-200 hover:text-primary dark:hover:text-primary transition">Kontakt</a>
-          <Link href="/teamspeak" className="font-medium text-blue-600 dark:text-blue-400 hover:text-primary dark:hover:text-primary transition">TeamSpeak</Link>
+          <Link href="/teamspeak" className="font-medium text-blue-600 dark:text-blue-400 hover:text-primary dark:hover:text-primary transition">
+            TeamSpeak
+          </Link>
           <a 
             href="https://discord.gg/qEy8xf6CyV" 
             target="_blank" 
