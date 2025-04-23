@@ -61,14 +61,20 @@ export default function TeamspeakPage() {
                   
                   <div className="border-t border-gray-200 dark:border-gray-600 pt-4 mt-4">
                     <h4 className="font-semibold mb-2 dark:text-white">Support-Zeiten:</h4>
-                    <div className="grid grid-cols-2 gap-2 max-w-sm">
-                      <div className="bg-white/50 dark:bg-gray-800/50 p-2 rounded text-center">
+                    <div className="grid grid-cols-1 gap-2 max-w-sm">
+                      <div className="bg-white/50 dark:bg-gray-800/50 p-2 rounded">
                         <p className="font-medium text-sm dark:text-white">Mo - Fr</p>
-                        <p className="text-sm dark:text-gray-300">15:00 - 22:00 Uhr</p>
+                        <p className="text-sm dark:text-gray-300">8:00 - 20:00 Uhr</p>
                       </div>
-                      <div className="bg-white/50 dark:bg-gray-800/50 p-2 rounded text-center">
-                        <p className="font-medium text-sm dark:text-white">Sa - So</p>
-                        <p className="text-sm dark:text-gray-300">12:00 - 20:00 Uhr</p>
+                      <div className="bg-white/50 dark:bg-gray-800/50 p-2 rounded">
+                        <p className="font-medium text-sm dark:text-white">Sa</p>
+                        <p className="text-sm dark:text-gray-300">10:00 - 18:00 Uhr</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Danach freiwillig</p>
+                      </div>
+                      <div className="bg-white/50 dark:bg-gray-800/50 p-2 rounded">
+                        <p className="font-medium text-sm dark:text-white">So</p>
+                        <p className="text-sm dark:text-gray-300">Nach Vereinbarung</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">oder freiwillig</p>
                       </div>
                     </div>
                   </div>
