@@ -233,7 +233,7 @@ export default function Testimonials() {
                 {/* Indikator für aktives Testimonial */}
                 {displayTestimonials.length > 1 && (
                   <div className="flex justify-center mt-6 space-x-2">
-                    {displayTestimonials.map((testimonial, index) => (
+                    {displayTestimonials.map((testimonial: TestimonialItem, index: number) => (
                       <button
                         key={index}
                         onClick={() => setActiveIndex(index)}

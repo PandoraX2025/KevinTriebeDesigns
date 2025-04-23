@@ -140,21 +140,21 @@ export default function Footer({ year }: FooterProps) {
               <div>
                 <h3 className="text-lg font-bold mb-3 text-white border-b border-gray-700 pb-2">Leistungen</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/services" className="hover:text-white transition flex items-center">
+                  <li><a href="/services" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>Web-Entwicklung
-                  </Link></li>
-                  <li><Link href="/services" className="hover:text-white transition flex items-center">
+                  </a></li>
+                  <li><a href="/services" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>Scripting & Logik
-                  </Link></li>
-                  <li><Link href="/services" className="hover:text-white transition flex items-center">
+                  </a></li>
+                  <li><a href="/services" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>Discord Bots
-                  </Link></li>
-                  <li><Link href="/services" className="hover:text-white transition flex items-center">
+                  </a></li>
+                  <li><a href="/services" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>3D Design
-                  </Link></li>
-                  <li><Link href="/services" className="hover:text-white transition flex items-center">
+                  </a></li>
+                  <li><a href="/services" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>Grafikdesign
-                  </Link></li>
+                  </a></li>
                 </ul>
               </div>
               
@@ -162,16 +162,16 @@ export default function Footer({ year }: FooterProps) {
               <div>
                 <h3 className="text-lg font-bold mb-3 text-white border-b border-gray-700 pb-2">Navigation</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><a href="#home" className="hover:text-white transition flex items-center">
+                  <li><a href="/" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>Startseite
                   </a></li>
-                  <li><a href="#about" className="hover:text-white transition flex items-center">
+                  <li><a href="/about" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>Über uns
                   </a></li>
-                  <li><a href="#teamspeak" className="hover:text-white transition flex items-center">
+                  <li><a href="/teamspeak" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>TeamSpeak
                   </a></li>
-                  <li><a href="#contact" className="hover:text-white transition flex items-center">
+                  <li><a href="/contact" className="hover:text-white transition flex items-center">
                     <i className="fas fa-chevron-right text-xs mr-2 text-primary"></i>Kontakt
                   </a></li>
                 </ul>
@@ -183,12 +183,20 @@ export default function Footer({ year }: FooterProps) {
               {loginStatus.isLoggedIn ? (
                 <div className="text-right">
                   <p className="text-xs text-gray-400">Eingeloggt als <span className="font-medium">{loginStatus.username}</span></p>
-                  <button 
-                    onClick={handleLogout}
-                    className="text-xs text-gray-400 underline hover:text-white mt-1"
-                  >
-                    Abmelden
-                  </button>
+                  <div className="mt-1 space-x-3">
+                    <a 
+                      href="/admin" 
+                      className="text-xs text-gray-400 underline hover:text-white"
+                    >
+                      Admin-Bereich
+                    </a>
+                    <button 
+                      onClick={handleLogout}
+                      className="text-xs text-gray-400 underline hover:text-white"
+                    >
+                      Abmelden
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <div className="text-right">
